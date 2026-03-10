@@ -1,0 +1,64 @@
+@startuml "Komponentni diagram"
+
+skinparam defaultTextAlignment center
+skinparam backgroundcolor transparent
+skinparam shadowing false
+skinparam componentStyle uml2
+
+skinparam component {
+  BackgroundColor white
+  BorderColor #5FB8EC
+  ArrowColor black
+}
+skinparam database {
+  BackgroundColor white
+  BorderColor #5FB8EC
+}
+skinparam cloud {
+  BackgroundColor white
+  BorderColor #5FB8EC
+}
+skinparam rectangle {
+  BackgroundColor white
+  BorderColor #5FB8EC
+}
+skinparam actorBorderColor black
+skinparam actorBackgroundColor white
+
+actor Uporabnik
+
+rectangle "Mobilna aplikacija\n(React Native / Expo)" as MobileApp {
+  [Zajem slike\n(kamera)] as Camera
+  [Izbira košev\n(opcijsko)] as BinSelector
+  [GPS lokacija] as GPS
+  [Prikaz rezultata] as ResultView
+}
+
+rectangle "Zaledni strežnik\n(FastAPI)" as Backend {
+  [REST API] as API
+  [AI klasifikator odpadkov\n(EfficientNet)] as AIModel
+  [Iskanje pravil občine] as RulesEngine
+}
+
+database "Baza podatkov\n(PostgreSQL)" as DB {
+  [Pravila ločevanja\npo občinah] as Rules
+}
+
+cloud "HuggingFace Hub" as HF {
+  [Pred-treniran model\nyangy50/garbage-classification] as PretrainedModel
+}
+
+Uporabnik --> Camera : posname sliko
+Camera --> API : slika + GPS koordinate
+BinSelector --> API : izbrani koši (opcijsko)
+GPS --> API : koordinate
+API --> AIModel : slika
+HF ..> AIModel : enkratna naložitev modela\n(Apache 2.0, brezplačen)
+AIModel --> RulesEngine : kategorija odpadka + zaupanje
+RulesEngine --> Rules : GPS koordinate
+Rules --> RulesEngine : pravila občine
+RulesEngine --> API : priporočen koš + navodila
+API --> ResultView : rezultat (koš + zaupanje + nasvet)
+ResultView --> Uporabnik : prikazane informacije
+
+@enduml

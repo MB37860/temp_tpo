@@ -1,0 +1,101 @@
+@startgantt "Ganttov diagram"
+
+<style>
+ganttDiagram {
+  timeline {
+    BackgroundColor white
+    LineColor #e0e0e0
+    FontColor #333333
+    FontSize 12
+  }
+  task {
+    FontSize 12
+    FontColor #1a1a1a
+  }
+  arrow {
+    LineColor #888888
+    LineThickness 1.5
+  }
+  separator {
+    BackgroundColor #2c3e50
+    LineColor #1a252f
+    FontColor white
+    FontStyle bold
+    FontSize 13
+  }
+  closed {
+    BackgroundColor #f5f5f5
+    FontColor #cccccc
+  }
+}
+</style>
+
+skinparam backgroundColor white
+printscale weekly zoom 2
+language sl
+
+project starts 2026-02-19
+saturdays are closed
+sundays are closed
+
+-- Predpriprave (19.2. – 23.2.) --
+[A0: Priprava okolja in orodij] as [A0] starts 2026-02-19 and ends 2026-02-23
+[A0] is colored in #dcedc8/#7cb342
+
+-- 1. iteracija (23.2. – 16.3.) --
+[A1: Analiza zahtev] as [A1] starts 2026-02-23 and ends 2026-03-04
+[A1] is colored in #bbdefb/#1e88e5
+[A2: Načrtovanje arhitekture] as [A2] starts 2026-03-04 and ends 2026-03-10
+[A2] is colored in #bbdefb/#1e88e5
+[A3: Priprava predloga projekta] as [A3] starts 2026-03-04 and ends 2026-03-16
+[A3] is colored in #bbdefb/#1e88e5
+[A1] -> [A2]
+[A1] -> [A3]
+
+-- 2. iteracija (16.3. – 6.4.) --
+[B1: Razvoj mobilne aplikacije] as [B1] starts 2026-03-16 and ends 2026-03-30
+[B1] is colored in #fff9c4/#f9a825
+[B2: Razvoj zalednega strežnika] as [B2] starts 2026-03-16 and ends 2026-03-27
+[B2] is colored in #fff9c4/#f9a825
+[B3: Integracija AI modela] as [B3] starts 2026-03-16 and ends 2026-03-25
+[B3] is colored in #fff9c4/#f9a825
+[B4: Priprava baze pravil občin] as [B4] starts 2026-03-16 and ends 2026-03-26
+[B4] is colored in #fff9c4/#f9a825
+[B5: Priprava 1. poročila] as [B5] starts 2026-03-30 and ends 2026-04-06
+[B5] is colored in #fff9c4/#f9a825
+[A3] -> [B1]
+[A3] -> [B2]
+[A3] -> [B3]
+[A3] -> [B4]
+[B1] -> [B5]
+
+-- 3. iteracija (6.4. – 4.5.) --
+[C1: Integracija FE-BE] as [C1] starts 2026-04-06 and ends 2026-04-15
+[C1] is colored in #f8bbd0/#d81b60
+[C2: Testiranje sistema] as [C2] starts 2026-04-15 and ends 2026-04-27
+[C2] is colored in #f8bbd0/#d81b60
+[C3: Priprava 2. poročila] as [C3] starts 2026-04-15 and ends 2026-04-21
+[C3] is colored in #f8bbd0/#d81b60
+[B2] -> [C1]
+[C1] -> [C2]
+[C1] -> [C3]
+
+-- 4. iteracija (4.5. – 25.5.) --
+[D1: Uporabniško testiranje] as [D1] starts 2026-05-04 and ends 2026-05-08
+[D1] is colored in #e1bee7/#8e24aa
+[D2: Optimizacija in izboljšave] as [D2] starts 2026-05-08 and ends 2026-05-15
+[D2] is colored in #e1bee7/#8e24aa
+[D3: Pisanje dokumentacije] as [D3] starts 2026-05-08 and ends 2026-05-20
+[D3] is colored in #e1bee7/#8e24aa
+[D4: Priprava končnega produkta] as [D4] starts 2026-05-20 and ends 2026-05-25
+[D4] is colored in #e1bee7/#8e24aa
+[C2] -> [D1]
+[D1] -> [D2]
+[D1] -> [D3]
+[D2] -> [D4]
+
+-- Vodenje --
+[E1: Vodenje projekta] as [E1] starts 2026-02-19 and ends 2026-05-25
+[E1] is colored in #cfd8dc/#546e7a
+
+@endgantt
