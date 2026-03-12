@@ -21,43 +21,38 @@ skinparam State {
 skinparam defaultTextAlignment center
 
 state "<color:darkred>A0: Priprava okolja</color>" as A0 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  2 |  0 |  2 |\n|  0 |  0 |  2 |
-state "<color:darkred>A1: Analiza zahtev</color>" as A1 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  8 |  2 | 10 |\n|  0 |  2 | 10 |
-state "A2: Načrt arhitekture" as A2 : <#e8f5fd,#e8f5fd>|  4 | 10 | 14 |\n|  1 | 11 | 15 |
-state "<color:darkred>A3: Predlog projekta</color>" as A3 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  5 | 10 | 15 |\n|  0 | 10 | 15 |
-state "<color:darkred>B1: Mobilna aplikacija</color>" as B1 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>| 12 | 15 | 27 |\n|  0 | 15 | 27 |
-state "B2: Zaledni strežnik" as B2 : <#e8f5fd,#e8f5fd>| 10 | 15 | 25 |\n|  2 | 17 | 27 |
-state "B3: AI integracija" as B3 : <#e8f5fd,#e8f5fd>|  7 | 15 | 22 |\n|  5 | 20 | 27 |
-state "B4: Baza pravil" as B4 : <#e8f5fd,#e8f5fd>|  8 | 15 | 23 |\n| 11 | 26 | 34 |
-state "B5: 1. poročilo" as B5 : <#e8f5fd,#e8f5fd>|  5 | 27 | 32 |\n| 26 | 53 | 58 |
-state "<color:darkred>C1: Integracija FE-BE</color>" as C1 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  7 | 27 | 34 |\n|  0 | 27 | 34 |
-state "<color:darkred>C2: Testiranje</color>" as C2 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  8 | 34 | 42 |\n|  0 | 34 | 42 |
-state "C3: 2. poročilo" as C3 : <#e8f5fd,#e8f5fd>|  4 | 34 | 38 |\n| 20 | 54 | 58 |
-state "<color:darkred>D1: Upor. testiranje</color>" as D1 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  5 | 42 | 47 |\n|  0 | 42 | 47 |
-state "D2: Optimizacija" as D2 : <#e8f5fd,#e8f5fd>|  6 | 47 | 53 |\n|  2 | 49 | 55 |
-state "<color:darkred>D3: Dokumentacija</color>" as D3 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  8 | 47 | 55 |\n|  0 | 47 | 55 |
-state "<color:darkred>D4: Končni produkt</color>" as D4 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  3 | 55 | 58 |\n|  0 | 55 | 58 |
+state "<color:darkred>A1: Analiza zahtev</color>" as A1 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  9 |  2 | 11 |\n|  0 |  2 | 11 |
+state "A2: Načrt arhitekture" as A2 : <#e8f5fd,#e8f5fd>|  6 | 11 | 17 |\n| 45 | 56 | 62 |
+state "<color:darkred>A3: Predlog projekta</color>" as A3 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  7 | 11 | 18 |\n|  0 | 11 | 18 |
+state "B1: Mobilna aplikacija" as B1 : <#e8f5fd,#e8f5fd>| 10 | 18 | 28 |\n| 31 | 49 | 59 |
+state "<color:darkred>B2: Zaledni strežnik</color>" as B2 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>| 12 | 18 | 30 |\n|  0 | 18 | 30 |
+state "B3: AI integracija" as B3 : <#e8f5fd,#e8f5fd>|  9 | 18 | 27 |\n| 35 | 53 | 62 |
+state "B4: Baza pravil" as B4 : <#e8f5fd,#e8f5fd>|  7 | 18 | 25 |\n| 37 | 55 | 62 |
+state "B5: 1. poročilo" as B5 : <#e8f5fd,#e8f5fd>|  3 | 28 | 31 |\n| 31 | 59 | 62 |
+state "<color:darkred>C1: Integracija FE-BE</color>" as C1 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  4 | 30 | 34 |\n|  0 | 30 | 34 |
+state "<color:darkred>C2: Testiranje</color>" as C2 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>| 11 | 34 | 45 |\n|  0 | 34 | 45 |
+state "C3: 2. poročilo" as C3 : <#e8f5fd,#e8f5fd>|  2 | 34 | 36 |\n| 26 | 60 | 62 |
+state "<color:darkred>D1: Upor. testiranje</color>" as D1 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  5 | 45 | 50 |\n|  0 | 45 | 50 |
+state "<color:darkred>D2: Optimizacija</color>" as D2 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  5 | 50 | 55 |\n|  0 | 50 | 55 |
+state "D3: Dokumentacija" as D3 : <#e8f5fd,#e8f5fd>|  5 | 50 | 55 |\n|  7 | 57 | 62 |
+state "<color:darkred>D4: Končni produkt</color>" as D4 #ffe6e6;line:darkred : <#ffe6e6,#ffe6e6>|  7 | 55 | 62 |\n|  0 | 55 | 62 |
 
 [*] -[#darkred,bold]-> A0
 A0 -[#darkred,bold]-> A1
 A1 --> A2
 A1 -[#darkred,bold]-> A3
-A2 --> B1
-A3 -[#darkred,bold]-> B1
-A3 --> B2
+A3 -[#darkred,bold]-> B2
+A3 --> B1
 A3 --> B3
 A3 --> B4
-B1 -[#darkred,bold]-> C1
 B1 --> B5
-B2 --> C1
-B3 --> C1
-B4 --> C2
+B2 -[#darkred,bold]-> C1
 C1 -[#darkred,bold]-> C2
 C1 --> C3
 C2 -[#darkred,bold]-> D1
-D1 --> D2
-D1 -[#darkred,bold]-> D3
-D2 --> D4
-D3 -[#darkred,bold]-> D4
+D1 -[#darkred,bold]-> D2
+D1 --> D3
+D2 -[#darkred,bold]-> D4
 D4 -[#darkred,bold]-> [*]
 
 @enduml
